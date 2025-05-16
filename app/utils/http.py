@@ -6,6 +6,7 @@ from app.response.error import (
      HttpStatusCodeError,
      SteamNotFoundItem
 )
+from app.logs import logging_
 
 
 
@@ -38,12 +39,16 @@ class HttpClient:
                     response = await session.get(url=url)
                     
                     if response.status_code != 200:
+                         logging_.http.error(f"STEAM STATUS CODE ERROR: {response.text}")
                          return HttpStatusCodeError
                     
                     # 23,32 руб. -> 23.32
                     data = response.json().get("lowest_price")
                     if data is None:
+                         logging_.http.error(f"STEAM NOT FOUND ITEM: {name}")
                          return SteamNotFoundItem
+                    
+                    logging_.http.info(f"STEAM SUCCESS FIND ITEM: {name}")
                     
                     if currency == 1: # dollar
                          # $119.17 -> 119.17
@@ -59,7 +64,7 @@ class HttpClient:
                
                
                except Exception as ex:
-                    # logging
+                    logging_.http.error(exc_info=ex, msg="error")
                     return HttpError
                
                

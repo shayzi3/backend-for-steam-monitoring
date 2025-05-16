@@ -4,8 +4,7 @@ from sqlalchemy import select, update, delete, insert
 from app.types import PYDANTIC_MODEL, REDIS_RESULT
 from app.db.sql.session import Session
 from app.db.redis import RedisSession
-from app.schemas.v1 import UserSchema
-from app.core.utils import get_currency_curse
+from app.logs import logging_
 
 
 
@@ -25,6 +24,8 @@ class BaseRepository(Generic[PYDANTIC_MODEL]):
      ) -> PYDANTIC_MODEL | None:
           async with RedisSession() as session:
                value = await session.get(redis_value)
+               logging_.redis.info(f"GET VALUE FROM REDIS: {redis_value}")
+               
                if value is not None:
                     if redis_result == "model":
                          return cls.model.__pydantic_model__.model_validate_json(value.decode())
@@ -33,6 +34,8 @@ class BaseRepository(Generic[PYDANTIC_MODEL]):
           async with Session.session() as connection:
                sttm = select(cls.model).filter_by(**where)
                result = await connection.execute(sttm)
+               
+               logging_.db.info(f"GET VALUE FROM {cls.model} WHERE: {where}")
                
                scalar = result.scalar() # sqlalchemy model
                if scalar is None:
@@ -43,6 +46,7 @@ class BaseRepository(Generic[PYDANTIC_MODEL]):
                
           model = cls.model.__pydantic_model__.model_validate(scalar) 
           if redis_write_value is True:
+               logging_.redis.info(f"WRITE VALUE IN REDIS: {redis_value}")
                async with RedisSession() as session:
                     await session.set(
                          name=redis_value,
@@ -63,7 +67,10 @@ class BaseRepository(Generic[PYDANTIC_MODEL]):
                await connection.execute(sttm)
                await connection.commit()
                
+               logging_.db.info(f"INSERT DATA IN {cls.model}: {values}")
+               
           if redis_delete_value:
+               logging_.redis.info(f"DELETE VALUE FROM REDIS: {redis_delete_value}")
                async with RedisSession() as session:
                     await session.delete(*redis_delete_value)
           
@@ -85,11 +92,14 @@ class BaseRepository(Generic[PYDANTIC_MODEL]):
                result = await connection.execute(sttm)
                await connection.commit()
                
+               logging_.db.info(f"UPDATE VALUE IN {cls.model} WHERE: {where} VALUES: {values}")
+               
                result = result.fetchone()
                if result is None:
                     return None
           
           if redis_delete_value:
+               logging_.redis.info(f"DELETE VALUE FROM REDIS: {redis_delete_value}")
                async with RedisSession() as session:
                     await session.delete(*redis_delete_value)
           return True
@@ -111,11 +121,14 @@ class BaseRepository(Generic[PYDANTIC_MODEL]):
                result = await connection.execute(sttm)
                await connection.commit()
                
+               logging_.db.info(f"DELETE VALUE IN {cls.model}: {where}")
+               
                result = result.fetchone()
                if result is None:
                     return None
           
           if redis_delete_value:
+               logging_.redis.info(f"DELETE VALUE FROM REDIS: {redis_delete_value}")
                async with RedisSession() as session:
                     await session.delete(*redis_delete_value)
           return True

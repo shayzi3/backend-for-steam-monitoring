@@ -1,0 +1,450 @@
+LOG 2025-05-16 07:48:33,277 INFO BOT PATCH http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 07:48:33,315 INFO error
+Traceback (most recent call last):
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 148, in call_next
+    message = await recv_stream.receive()
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\anyio\streams\memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\middlewares\log.py", line 24, in dispatch
+    return await call_next(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 156, in call_next
+    raise app_exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 141, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\fastapi\routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\fastapi\dependencies\utils.py", line 638, in solve_dependencies
+    solved = await call(**solved_result.values)
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\dependency\timeout.py", line 23, in __call__
+    if self.timeout.get("path").get("current") <= datetime.now():
+AttributeError: 'NoneType' object has no attribute 'get'
+LOG 2025-05-16 16:49:33,553 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 16:52:01,885 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 16:52:32,436 INFO BOT PATCH http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 16:52:32,452 ERROR error
+Traceback (most recent call last):
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 148, in call_next
+    message = await recv_stream.receive()
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\anyio\streams\memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\middlewares\log.py", line 24, in dispatch
+    return await call_next(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 156, in call_next
+    raise app_exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 141, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\routers\user\router.py", line 138, in update_user
+    print(5/0)
+ZeroDivisionError: division by zero
+LOG 2025-05-16 16:54:15,620 INFO BOT PATCH http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 16:54:25,542 INFO BOT PATCH http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 16:54:33,421 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 16:54:47,300 INFO BOT PATCH http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 16:55:03,245 INFO BOT PATCH http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 16:55:22,879 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:01:31,844 INFO BOT PATCH http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:01:31,844 ERROR error
+Traceback (most recent call last):
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 148, in call_next
+    message = await recv_stream.receive()
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\anyio\streams\memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\middlewares\log.py", line 25, in dispatch
+    return await call_next(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 156, in call_next
+    raise app_exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 141, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\routers\user\router.py", line 138, in update_user
+    5/0
+ZeroDivisionError: division by zero
+LOG 2025-05-16 17:02:34,057 INFO BOT PATCH http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:02:34,072 ERROR error
+Traceback (most recent call last):
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 148, in call_next
+    message = await recv_stream.receive()
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\anyio\streams\memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\middlewares\log.py", line 25, in dispatch
+    return await call_next(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 156, in call_next
+    raise app_exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 141, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\routers\user\router.py", line 138, in update_user
+    5/0
+ZeroDivisionError: division by zero
+LOG 2025-05-16 17:03:19,231 INFO BOT PATCH http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:04:58,099 INFO BOT PATCH http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:04:58,115 ERROR error
+Traceback (most recent call last):
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 148, in call_next
+    message = await recv_stream.receive()
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\anyio\streams\memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\middlewares\log.py", line 25, in dispatch
+    return await call_next(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 156, in call_next
+    raise app_exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 141, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\routers\user\router.py", line 138, in update_user
+    if any(arguments.values_) is False:
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\pydantic\main.py", line 994, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'UserUpdateArguments' object has no attribute 'values_'. Did you mean: 'values'?
+LOG 2025-05-16 17:17:32,942 INFO Address(host='127.0.0.1', port=50623) GET http://localhost:9091/
+LOG 2025-05-16 17:17:32,991 INFO Address(host='127.0.0.1', port=50623) GET http://localhost:9091/favicon.ico
+LOG 2025-05-16 17:17:36,291 INFO Address(host='127.0.0.1', port=50623) GET http://localhost:9091/docs
+LOG 2025-05-16 17:17:36,506 INFO Address(host='127.0.0.1', port=50623) GET http://localhost:9091/openapi.json
+LOG 2025-05-16 17:20:03,782 INFO Address(host='127.0.0.1', port=50668) GET http://localhost:9091/
+LOG 2025-05-16 17:20:12,238 INFO Address(host='127.0.0.1', port=50669) GET http://localhost:9091/docs
+LOG 2025-05-16 17:20:12,442 INFO Address(host='127.0.0.1', port=50669) GET http://localhost:9091/openapi.json
+LOG 2025-05-16 17:20:47,339 INFO Address(host='127.0.0.1', port=50693) GET http://localhost:9091/docs
+LOG 2025-05-16 17:20:47,418 INFO Address(host='127.0.0.1', port=50693) GET http://localhost:9091/openapi.json
+LOG 2025-05-16 17:23:15,347 INFO Address(host='127.0.0.1', port=50755) GET http://localhost:9091/docs
+LOG 2025-05-16 17:23:15,348 ERROR error
+Traceback (most recent call last):
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 148, in call_next
+    message = await recv_stream.receive()
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\anyio\streams\memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\middlewares\log.py", line 25, in dispatch
+    return await call_next(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 156, in call_next
+    raise app_exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 141, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 176, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Python\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 179, in __call__
+    await response(scope, wrapped_receive, send)
+TypeError: 'NoneType' object is not callable
+LOG 2025-05-16 17:25:19,505 INFO Address(host='127.0.0.1', port=50791) GET http://localhost:9091/docs
+LOG 2025-05-16 17:25:19,676 INFO Address(host='127.0.0.1', port=50791) GET http://localhost:9091/openapi.json
+LOG 2025-05-16 17:25:35,749 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:26:42,790 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:27:08,453 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:42:12,145 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:42:13,189 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:42:15,907 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:42:17,021 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:42:18,348 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:42:19,597 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:42:20,662 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:42:21,697 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:44:44,979 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:44:52,536 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:44:53,541 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:44:54,772 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:44:55,897 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:46:31,123 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:47:07,500 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:47:07,500 ERROR error
+Traceback (most recent call last):
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 148, in call_next
+    message = await recv_stream.receive()
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\anyio\streams\memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\middlewares\log.py", line 24, in dispatch
+    return await call_next(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 156, in call_next
+    raise app_exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 141, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 176, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Python\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 178, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\middlewares\timeout.py", line 39, in dispatch
+    print(request.user)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\requests.py", line 169, in user
+    assert "user" in self.scope, "AuthenticationMiddleware must be installed to access request.user"
+AssertionError: AuthenticationMiddleware must be installed to access request.user
+LOG 2025-05-16 17:47:47,711 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:47:48,984 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:50:22,626 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:50:22,626 ERROR error
+Traceback (most recent call last):
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 148, in call_next
+    message = await recv_stream.receive()
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\anyio\streams\memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\middlewares\log.py", line 24, in dispatch
+    return await call_next(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 156, in call_next
+    raise app_exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 141, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 176, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Python\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 178, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\middlewares\timeout.py", line 34, in dispatch
+    client = request.client.host + ";" + request.client.port
+TypeError: can only concatenate str (not "int") to str
+LOG 2025-05-16 17:50:23,923 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:50:23,923 ERROR error
+Traceback (most recent call last):
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 148, in call_next
+    message = await recv_stream.receive()
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\anyio\streams\memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\middlewares\log.py", line 24, in dispatch
+    return await call_next(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 156, in call_next
+    raise app_exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 141, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 176, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Python\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 178, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\middlewares\timeout.py", line 34, in dispatch
+    client = request.client.host + ";" + request.client.port
+TypeError: can only concatenate str (not "int") to str
+LOG 2025-05-16 17:51:03,580 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:51:04,839 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:51:36,449 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:51:38,359 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:51:39,697 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:51:40,814 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:51:41,949 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:51:59,378 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:52:16,671 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:52:22,821 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:52:24,220 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:52:25,977 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:52:27,335 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:52:28,677 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:52:35,067 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:52:40,700 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:52:42,725 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:52:48,913 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:52:53,896 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:52:55,495 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:53:01,509 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:53:03,927 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:53:06,825 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:53:08,442 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:53:10,208 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:53:11,932 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:53:16,289 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:53:24,004 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:53:35,871 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:53:45,698 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:53:47,299 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:53:48,498 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:53:49,730 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:53:50,800 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:53:57,378 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:53:58,546 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:53:59,632 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:54:00,866 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:54:01,929 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:54:03,026 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:54:04,331 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:54:05,663 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:54:06,911 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:54:08,245 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:54:18,147 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:56:55,703 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:56:57,552 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:56:58,897 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:57:01,396 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:57:05,214 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:57:43,031 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:57:45,809 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:57:48,001 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:57:49,952 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:57:51,366 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:57:52,441 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:57:53,561 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:57:54,549 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:57:55,500 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:58:01,164 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:58:02,988 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:58:05,366 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:58:07,021 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:58:07,996 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:58:13,994 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:58:16,777 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:58:24,780 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-16 17:58:28,573 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111

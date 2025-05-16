@@ -1,4 +1,5 @@
 from typing import Annotated
+from datetime import timedelta
 from fastapi import (
      APIRouter, 
      Depends,
@@ -10,7 +11,6 @@ from app.response.success import UserUpdated
 from app.response import is_response
 from app.response.error import InvalidArguments
 from app.schemas.v1 import UserSchema
-from app.schemas.v1.enums import Currency, Language
 from .service import get_user_service, UserService
 from .schema import UserUpdateArguments, UserCreateArguments
 
@@ -145,6 +145,13 @@ async def update_user(
           if "currency" in arguments.non_nullable():
                background_task.add_task(
                     service.change_price_of_skins,
+                    telegram_id=telegram_id
+               )
+               
+          if "timer" in arguments.non_nullable():
+               background_task.add_task(
+                    service.set_time_in_redis,
+                    periodic_time=arguments.timer,
                     telegram_id=telegram_id
                )
      return result.response()

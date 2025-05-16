@@ -12,7 +12,7 @@ from app.response.error import (
 from app.response.success import SkinCreated
 from app.db.sql.repository import SkinRepository, UserRepository
 from app.core.security import generate_skin_id
-from app.api.v1.utils.http import HttpClient
+from app.utils.http import HttpClient
 
 
 

@@ -9,7 +9,7 @@ from .base import Base
 
 
 
-class Users(Base[UserSchema]):
+class Users(Base):
      __pydantic_model__ = UserSchema
      __tablename__ = "users"
      
@@ -33,8 +33,11 @@ class Users(Base[UserSchema]):
           return cls.telegram_id
      
      
+     def __str__(self):
+          return "Users"     
      
-class Skins(Base[SkinSchema]):
+     
+class Skins(Base):
      __pydantic_model__ = SkinSchema
      __tablename__ = "skins"
      
@@ -53,4 +56,7 @@ class Skins(Base[SkinSchema]):
      @classmethod
      def returning_value(cls):
           return cls.skin_id
+     
+     def __str__(self):
+          return "Skins"
      

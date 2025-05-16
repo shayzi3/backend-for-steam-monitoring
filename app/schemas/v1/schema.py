@@ -1,8 +1,8 @@
 from typing import TYPE_CHECKING
 from datetime import datetime
-from pydantic import ConfigDict, field_validator
+from pydantic import field_validator, Field
 
-from .base import BaseSkinSchema, BaseUserSchema
+from .base import BaseSkinSchema, BaseUserSchema, Time
 
 
 if TYPE_CHECKING:
@@ -15,7 +15,7 @@ if TYPE_CHECKING:
 class UserSchema(BaseUserSchema):
      created_at: datetime
      notify: bool
-     timer: str | None
+     timer: Time | str # in this attribute keeping only Time
      skins: list[BaseSkinSchema]
      
      
@@ -25,6 +25,15 @@ class UserSchema(BaseUserSchema):
           if skins:
                return [BaseSkinSchema.model_validate(obj) for obj in skins]
           return []
+     
+     
+     @field_validator("timer")
+     @classmethod
+     def timer_validator(cls, timer: str | dict):
+          # dict comes from redis
+          if isinstance(timer, str):
+               return Time.from_str(timer)
+          return timer
      
      
      @property

@@ -1,0 +1,2 @@
+LOG 2025-05-13 21:17:04,058 INFO Address(host='127.0.0.1', port=54413) GET http://localhost:9091/docs
+LOG 2025-05-13 21:17:04,226 INFO Address(host='127.0.0.1', port=54413) GET http://localhost:9091/openapi.json

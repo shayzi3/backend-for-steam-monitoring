@@ -1,13 +1,15 @@
 import asyncio
 
 from typing import Any
+from datetime import datetime
 
-from app.api.v1.utils.http import HttpClient
+from app.utils.http import HttpClient
 from app.response import JsonResponseProtocol
 from app.response.error import UserExists, UserNotExists
 from app.response.success import UserCreated, UserUpdated
 from app.db.sql.repository import UserRepository, SkinRepository
-from app.schemas.v1 import UserSchema
+from app.db.redis import RedisSession
+from app.schemas.v1 import UserSchema, Time
 
 
 
@@ -42,6 +44,7 @@ class UserService:
                          "telegram_username": telegram_username,
                          "language": language,
                          "currency": currency,
+                         "timer": "0-0-0"
                     }
                )
                return UserCreated
@@ -111,6 +114,31 @@ class UserService:
                await self.skin_repository.update_many(
                     data=weapon,
                     redis_delete_values=redis_delete_values
+               )
+               
+             
+     async def set_time_in_redis(
+          self,
+          periodic_time: str,
+          telegram_id: int
+     ) -> None:
+          async with RedisSession() as session:
+               time = Time.from_str(periodic_time).to_timedelta()
+               new_time = (datetime.now() + time).isoformat()
+               
+               tasks = [value.decode() for value in await session.lrange("tasks", 0, -1)]
+               for index, user in enumerate(tasks):
+                    user_id = user.split(":")[-1]
+                    if user_id.isdigit():
+                         if int(user_id) == telegram_id:
+                              return await session.lset(
+                                   name="tasks", 
+                                   index=index, 
+                                   value=f"{periodic_time};{new_time};{telegram_id}"
+                              )
+               await session.lpush(
+                    "tasks", 
+                    f"{periodic_time};{new_time};{telegram_id}"
                )
                
      

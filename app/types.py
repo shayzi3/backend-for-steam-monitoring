@@ -1,4 +1,4 @@
-from typing import TypeVar, Literal, NewType
+from typing import TypeVar, Literal
 
 
 REDIS_RESULT = Literal["any", "model"]

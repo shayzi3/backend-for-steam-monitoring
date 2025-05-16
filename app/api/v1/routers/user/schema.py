@@ -1,7 +1,9 @@
 from typing import Any
-from pydantic import BaseModel
+from pydantic import BaseModel, field_validator
 
 from app.schemas.v1.enums import Language, Currency
+from app.schemas.v1 import Time
+
 
 
 
@@ -23,6 +25,18 @@ class UserUpdateArguments(BaseModel):
      currency: Currency | None = None
      notify: bool | None = None
      timer: str | None = None
+     
+     
+     
+     @field_validator("timer")
+     @classmethod
+     def timer_validator(cls, timer: str | None) -> None:
+          # timer format: days:hours:minutes
+          if timer:
+               time = Time.from_str(timer)
+               if isinstance(time, str):
+                    raise ValueError(time)
+               return time.to_str()
      
      
      def model_post_init(self, _: Any):

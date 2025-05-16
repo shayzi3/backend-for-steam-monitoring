@@ -6,6 +6,7 @@ from app.db.redis import RedisSession
 from app.db.sql.models import Skins
 from app.db.sql.session import Session
 from app.schemas.v1 import SkinSchema
+from app.logs import logging_
 from .base import BaseRepository
 
 
@@ -32,8 +33,11 @@ class SkinRepository(BaseRepository[SkinSchema]):
                     values(current_price=bindparam("_current_price"))
                )
                await connection.execute(sttm, data)
+               
+               logging_.db.info(f"UPDATE PRICE AT SKINS: TELEGRAM_ID: {data[0]}")
 
           if redis_delete_values:
+               logging_.redis.info(f"DELETE VALUE FROM REDIS: {redis_delete_values}")
                async with RedisSession() as session:
                     await session.delete(*redis_delete_values)
                

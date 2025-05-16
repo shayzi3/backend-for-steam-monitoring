@@ -23,14 +23,14 @@ class Logger:
      @property
      def api(self) -> BaseLogger:
           return BaseLogger(
-               path="app/logs/api"
+               path="app/logs/api/"
           )
           
      
      @property
      def db(self) -> BaseLogger:
           return BaseLogger(
-               path="app/logs/db"
+               path="app/logs/db/"
           )
           
      
@@ -51,7 +51,14 @@ class Logger:
      @property
      def http(self) -> BaseLogger:
           return BaseLogger(
-               path="app/logs/http"
+               path="app/logs/http/"
+          )
+          
+          
+     @property
+     def worker_monitoring(self) -> BaseLogger:
+          return BaseLogger(
+               path="app/logs/workers/monitoring/"
           )
           
           

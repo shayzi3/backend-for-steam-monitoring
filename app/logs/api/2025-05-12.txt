@@ -1,0 +1,50 @@
+LOG 2025-05-12 20:44:46,959 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-12 20:45:21,479 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-12 20:47:07,848 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-12 20:47:40,044 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-12 20:47:40,061 INFO error
+Traceback (most recent call last):
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 148, in call_next
+    message = await recv_stream.receive()
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\anyio\streams\memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\middlewares\log.py", line 24, in dispatch
+    return await call_next(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 156, in call_next
+    raise app_exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 141, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\fastapi\routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\fastapi\dependencies\utils.py", line 638, in solve_dependencies
+    solved = await call(**solved_result.values)
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\dependency\timeout.py", line 20, in __call__
+    request.url.netloc.path,
+AttributeError: 'str' object has no attribute 'path'
+LOG 2025-05-12 20:48:28,439 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111
+LOG 2025-05-12 20:49:29,251 INFO BOT GET http://localhost:9091/api/v1/user?telegram_id=111111111

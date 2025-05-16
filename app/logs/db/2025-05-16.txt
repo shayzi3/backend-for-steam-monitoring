@@ -1,0 +1,40 @@
+LOG 2025-05-16 15:42:07,768 INFO UPDATE VALUE IN <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111} VALUES: {'timer': '0-0-40'}
+LOG 2025-05-16 15:43:22,602 INFO UPDATE VALUE IN <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111} VALUES: {'timer': '0-0-40'}
+LOG 2025-05-16 15:44:42,669 INFO UPDATE VALUE IN <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111} VALUES: {'timer': '0:0:40'}
+LOG 2025-05-16 15:45:52,441 INFO UPDATE VALUE IN <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111} VALUES: {'timer': '0:0:40'}
+LOG 2025-05-16 15:46:55,542 INFO UPDATE VALUE IN <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111} VALUES: {'timer': '0:0:40'}
+LOG 2025-05-16 15:48:49,929 INFO UPDATE VALUE IN <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111} VALUES: {'timer': '0:1:0'}
+LOG 2025-05-16 15:49:12,397 INFO UPDATE VALUE IN <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111} VALUES: {'timer': '0:2:0'}
+LOG 2025-05-16 15:50:15,698 INFO UPDATE VALUE IN <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111} VALUES: {'currency': 5}
+LOG 2025-05-16 15:50:15,725 INFO GET VALUE FROM <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111}
+LOG 2025-05-16 15:50:36,192 INFO GET VALUE FROM <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111}
+LOG 2025-05-16 15:53:00,811 INFO GET VALUE FROM <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111}
+LOG 2025-05-16 15:55:40,918 INFO GET VALUE FROM <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111}
+LOG 2025-05-16 15:55:56,524 INFO UPDATE VALUE IN <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111} VALUES: {'currency': 18}
+LOG 2025-05-16 15:55:56,549 INFO GET VALUE FROM <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111}
+LOG 2025-05-16 15:55:58,120 INFO UPDATE PRICE AT SKINS: TELEGRAM_ID: {'_telegram_user_id': 111111111, '_name': 'Recoil Case', '_current_price': 12.84}
+LOG 2025-05-16 15:56:08,297 INFO GET VALUE FROM <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111}
+LOG 2025-05-16 15:56:24,803 INFO UPDATE VALUE IN <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111} VALUES: {'currency': 5}
+LOG 2025-05-16 15:56:24,825 INFO GET VALUE FROM <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111}
+LOG 2025-05-16 15:56:26,252 INFO UPDATE PRICE AT SKINS: TELEGRAM_ID: {'_telegram_user_id': 111111111, '_name': 'Recoil Case', '_current_price': 24.4}
+LOG 2025-05-16 15:56:29,741 INFO GET VALUE FROM <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111}
+LOG 2025-05-16 16:04:34,290 INFO UPDATE VALUE IN <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111} VALUES: {'timer': '0-0-25'}
+LOG 2025-05-16 16:04:46,476 INFO GET VALUE FROM <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111}
+LOG 2025-05-16 16:11:57,475 INFO GET VALUE FROM <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 9}
+LOG 2025-05-16 16:12:27,507 INFO GET VALUE FROM <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 36}
+LOG 2025-05-16 16:12:57,547 INFO GET VALUE FROM <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 37}
+LOG 2025-05-16 16:18:27,510 INFO GET VALUE FROM <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111}
+LOG 2025-05-16 16:54:15,907 INFO UPDATE VALUE IN <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111} VALUES: {'notify': True}
+LOG 2025-05-16 16:54:25,567 INFO UPDATE VALUE IN <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111} VALUES: {'notify': True}
+LOG 2025-05-16 16:54:33,461 INFO GET VALUE FROM <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111}
+LOG 2025-05-16 16:54:47,328 INFO UPDATE VALUE IN <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111} VALUES: {'language': 'RU'}
+LOG 2025-05-16 16:55:03,288 INFO UPDATE VALUE IN <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111} VALUES: {'currency': 3}
+LOG 2025-05-16 16:55:03,328 INFO GET VALUE FROM <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111}
+LOG 2025-05-16 16:55:04,899 INFO UPDATE PRICE AT SKINS: TELEGRAM_ID: {'_telegram_user_id': 111111111, '_name': 'Recoil Case', '_current_price': 0.28}
+LOG 2025-05-16 16:55:22,895 INFO GET VALUE FROM <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111}
+LOG 2025-05-16 17:03:19,350 INFO UPDATE VALUE IN <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111} VALUES: {'currency': 3}
+LOG 2025-05-16 17:03:19,388 INFO GET VALUE FROM <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111}
+LOG 2025-05-16 17:03:20,731 INFO UPDATE PRICE AT SKINS: TELEGRAM_ID: {'_telegram_user_id': 111111111, '_name': 'Recoil Case', '_current_price': 0.28}
+LOG 2025-05-16 17:25:35,897 INFO GET VALUE FROM <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111}
+LOG 2025-05-16 17:42:13,431 INFO GET VALUE FROM <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111}
+LOG 2025-05-16 17:52:16,877 INFO GET VALUE FROM <class 'app.db.sql.models.model.Users'> WHERE: {'telegram_id': 111111111}
