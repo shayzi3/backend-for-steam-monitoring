@@ -3,6 +3,7 @@ import asyncio
 
 from datetime import timedelta
 from fastapi import FastAPI, Depends
+from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 
 from app.api.v1.routers import include_routers
@@ -57,6 +58,16 @@ app = FastAPI(
                               }
                          }
                     }
+               },
+               405: {
+                    "description": "In headers must be telegram id. Field 'user'",
+                    "content": {
+                         "application/json": {
+                              "example": {
+                                   "detail": "NotFoundInHadersTelegramID"
+                              }
+                         }
+                    }
                }
           },
           dependencies=[Depends(validate_unique_token)],
@@ -84,6 +95,16 @@ app.add_middleware(
      }
 )
 app.add_middleware(LogMiddleware)
+app.add_middleware(
+     CORSMiddleware,
+     allow_origins=[
+          "http://localhost",
+          "http://localhost:8083"
+     ],
+     allow_credentials=True,
+     allow_methods=["*"],
+     allow_headers=["*"]
+)
 include_routers(app)
 
 
@@ -93,7 +114,7 @@ include_routers(app)
 if __name__ == "__main__":
      uvicorn.run(
           "main:app", 
-          port=9091, 
+          port=8084, 
           host="localhost",
           reload=True
      )

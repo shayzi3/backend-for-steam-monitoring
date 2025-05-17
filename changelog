@@ -1,1 +1,2 @@
-12.05.2025 LogMiddleware, Timeout, MonitoingWorker, CORSMiddleware
+16.05.2025 LogMiddleware, Timeout, MonitoringWorker
+17.05.2025 CORSMiddleware, Send Execption, Fix Timeout

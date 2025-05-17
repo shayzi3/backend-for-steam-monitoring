@@ -1,6 +1,6 @@
 from typing import TYPE_CHECKING
 from datetime import datetime
-from pydantic import field_validator, Field
+from pydantic import field_validator
 
 from .base import BaseSkinSchema, BaseUserSchema, Time
 

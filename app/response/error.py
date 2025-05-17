@@ -1,6 +1,6 @@
 from fastapi import status
 
-from .abstract_response import BaseJsonResponse
+from .base import BaseJsonResponse
 
 
 
@@ -55,3 +55,21 @@ class HttpError(BaseJsonResponse):
 class SteamNotFoundItem(BaseJsonResponse):
      content = "SteamNotFoundItem"
      status_code = 1404
+     
+     
+     
+class RequestTimeout(BaseJsonResponse):
+     content = "RequestTimeout"
+     status_code = status.HTTP_408_REQUEST_TIMEOUT
+     
+     
+     
+class ServerError(BaseJsonResponse):
+     content = "TryRequestLater"
+     status_code = status.HTTP_500_INTERNAL_SERVER_ERROR
+     
+     
+     
+class HeadersError(BaseJsonResponse):
+     content = "NotFoundInHadersTelegramID"
+     status_code = status.HTTP_405_METHOD_NOT_ALLOWED

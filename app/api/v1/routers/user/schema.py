@@ -14,9 +14,10 @@ class UserCreateArguments(BaseModel):
      currency: Currency
      
      
-     def model_post_init(self, _: Any):
-          self.language = self.language.value
-          self.currency = self.currency.int_value
+     # def model_post_init(self, _: Any):
+          
+          # self.language = self.language.value
+          # self.currency = self.currency.int_value
 
 
 

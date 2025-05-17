@@ -1,7 +1,6 @@
 import asyncio
 
 from datetime import datetime
-from typing import Any
 
 from app.db.redis import RedisSession
 from app.db.sql.repository import UserRepository, SkinRepository
@@ -24,7 +23,7 @@ class MonitoringWorker:
      
      async def run(self) -> None:
           while True:
-               logging_.worker_monitoring.info("Start worker. Find users by time")
+               logging_.worker_monitoring.info("Start worker")
                
                async with RedisSession() as session:
                     tasks = [value.decode() for value in await session.lrange("tasks", 0, -1)]
@@ -32,9 +31,12 @@ class MonitoringWorker:
                     if tasks:
                          parallel = []
                          for index, time_user in enumerate(tasks):
-                              period = time_user.split(";")[0]
-                              time = datetime.fromisoformat(time_user.split(";")[1])
-                              user = int(time_user.split(";")[2])
+                              try:
+                                   period = time_user.split(";")[0]
+                                   time = datetime.fromisoformat(time_user.split(";")[1])
+                                   user = int(time_user.split(";")[2])
+                              except Exception as ex:
+                                   await self.http_client.send_exception_message(exec=ex)
                               
                               if time <= datetime.now():
                                    new_time = (
@@ -49,7 +51,7 @@ class MonitoringWorker:
                          if parallel:
                               logging_.worker_monitoring.info("Start gather for users")
                               await asyncio.gather(*parallel)
-               await asyncio.sleep(30)
+               await asyncio.sleep(180)
           
           
      async def __price_updater(
@@ -112,15 +114,7 @@ class MonitoringWorker:
                     data=update_skins,
                     redis_delete_values=delete_values
                )
-               await self.__send_notify(
+               await self.http_client.send_notify_message(
                     data=notify,
                     telegram_id=telegram_id
                )
-               
-               
-     async def __send_notify(
-          self,
-          data: list[dict[str, Any]],
-          telegram_id: int
-     ) -> None:
-          print(data, telegram_id)

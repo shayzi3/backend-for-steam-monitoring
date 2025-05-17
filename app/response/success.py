@@ -1,6 +1,6 @@
 from fastapi import status
 
-from .abstract_response import BaseJsonResponse
+from .base import BaseJsonResponse
 
 
      

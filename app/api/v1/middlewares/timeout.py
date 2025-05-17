@@ -1,23 +1,30 @@
 from typing import Callable, Awaitable
 from datetime import datetime, timedelta
-from fastapi import Request, Response, status
-from fastapi.responses import JSONResponse
+from fastapi import Request, Response
 
-from starlette.middleware.base import BaseHTTPMiddleware, RequestResponseEndpoint
-from starlette.types import ASGIApp
+from starlette.middleware.base import (
+     BaseHTTPMiddleware, 
+     RequestResponseEndpoint
+)
+from app.response.error import RequestTimeout, HeadersError
 
 
 
 
 class TimeoutMiddleware(BaseHTTPMiddleware):
-     users = {}
+     users = {
+          "GET": {},
+          "POST": {},
+          "PATCH": {},
+          "DELETE": {}
+     }
      
      
      def __init__(
           self, 
-          app: ASGIApp,
+          app,
           routes: dict[str, dict[str, timedelta]],
-          main_path: str = ""
+          main_path: str = "",
      ) -> None:
           self.routes = routes
           self.main_path = main_path
@@ -31,23 +38,27 @@ class TimeoutMiddleware(BaseHTTPMiddleware):
      ) -> Callable[[Request], Awaitable[Response]]:
           method = request.method
           path = request.url.components.path
-          client = str(request.client.host) + ":" + str(request.client.port)
+          user = request.headers.get("user")
+          
+          if user == "system":
+               return await call_next(request)
+
+          if not user:
+               return HeadersError.response()
           
           for key, value in self.routes[method].items():
                if self.main_path:
                     key = self.main_path + key
                
                if key == path:
-                    if client not in self.users:
-                         self.users[client] = datetime.utcnow() + value
+                    if key not in self.users[method]:
+                         self.users[method].update({key: {}})
                          
-                    if datetime.utcnow() <= self.users[client]:
-                         self.users[client] = datetime.utcnow() + value
+                    if user not in self.users[method][key]:
+                         self.users[method][key].update({user: datetime.utcnow() + value})
                          return await call_next(request)
-                    return await self.try_later()
-          
-     async def try_later(self) -> JSONResponse:
-          return JSONResponse(
-               content={"detail": "RequestTImeout"},
-               status_code=status.HTTP_408_REQUEST_TIMEOUT
-          )
+                         
+                    if datetime.utcnow() >= self.users[method][key][user]:
+                         self.users[method][key][user] = datetime.utcnow() + value
+                         return await call_next(request)
+                    return RequestTimeout.response()

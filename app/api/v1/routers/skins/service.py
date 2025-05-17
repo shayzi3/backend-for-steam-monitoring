@@ -31,12 +31,20 @@ class SkinService:
      
      async def get_skin(
           self,
-          skin_id: int,
-          telegram_id: int
+          telegram_id: int,
+          skin_id: int | None = None,
+          skin_name: str | None = None,
      ) -> SkinSchema | JsonResponseProtocol:
+          where = (
+               {"skin_id": skin_id}
+               if skin_name is None 
+               else {"name": skin_name}
+          )
+          where.update({"telegram_user_id": telegram_id})
+          
           skin = await self.skin_repository.read(
                redis_value=f"skin:{skin_id};{telegram_id}",
-               where={"telegram_user_id": telegram_id, "skin_id": skin_id},
+               where=where,
                redis_write_value=True
           )
           if skin is None:
@@ -89,9 +97,17 @@ class SkinService:
      async def change_skin(
           self,
           skin_id: int,
+          skin_name: str,
           telegram_id: int,
           non_nullable_values: dict[str, Any]
           ) -> JsonResponseProtocol:
+          where = (
+               {"skin_id": skin_id}
+               if skin_name is None 
+               else {"name": skin_name}
+          )
+          where.update({"telegram_user_id": telegram_id})
+           
           user_update = await self.skin_repository.update(
                where={"telegram_id": telegram_id, "skin_id": skin_id},
                values=non_nullable_values,
@@ -114,7 +130,7 @@ class SkinService:
                if skin_name is None
                else {"name": skin_name}
           )
-          where.update({"telegram_id": telegram_id})
+          where.update({"telegram_user_id": telegram_id})
           
           user_deleted = await self.skin_repository.delete(
                where=where,

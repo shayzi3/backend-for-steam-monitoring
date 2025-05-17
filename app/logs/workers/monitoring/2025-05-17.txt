@@ -1,0 +1,70 @@
+LOG 2025-05-17 08:38:24,684 INFO Start worker. Find users by time
+LOG 2025-05-17 09:19:41,446 INFO Start worker. Find users by time
+LOG 2025-05-17 09:19:41,463 INFO Find user 111111111 with time 2025-05-16 18:25:49.852658
+LOG 2025-05-17 09:19:41,463 INFO Start gather for users
+LOG 2025-05-17 09:19:41,463 INFO Start gather for user 111111111
+LOG 2025-05-17 09:20:14,614 INFO Start worker. Find users by time
+LOG 2025-05-17 09:20:44,611 INFO Start worker. Find users by time
+LOG 2025-05-17 09:21:14,615 INFO Start worker. Find users by time
+LOG 2025-05-17 09:21:44,624 INFO Start worker. Find users by time
+LOG 2025-05-17 09:22:14,633 INFO Start worker. Find users by time
+LOG 2025-05-17 09:22:44,647 INFO Start worker. Find users by time
+LOG 2025-05-17 09:23:14,672 INFO Start worker. Find users by time
+LOG 2025-05-17 09:25:56,831 INFO Start worker. Find users by time
+LOG 2025-05-17 09:26:26,828 INFO Start worker. Find users by time
+LOG 2025-05-17 09:27:00,977 INFO Start worker. Find users by time
+LOG 2025-05-17 09:27:30,999 INFO Start worker. Find users by time
+LOG 2025-05-17 09:37:23,405 INFO Start worker. Find users by time
+LOG 2025-05-17 09:37:23,405 INFO Find user 111111111 with time 2025-05-17 09:33:43.662992
+LOG 2025-05-17 09:37:23,405 INFO Start gather for users
+LOG 2025-05-17 09:37:23,405 INFO Start gather for user 111111111
+LOG 2025-05-17 09:37:58,175 INFO Start worker. Find users by time
+LOG 2025-05-17 09:38:54,329 INFO Start worker. Find users by time
+LOG 2025-05-17 09:40:15,200 INFO Start worker. Find users by time
+LOG 2025-05-17 09:41:46,364 INFO Start worker. Find users by time
+LOG 2025-05-17 09:42:30,106 INFO Start worker. Find users by time
+LOG 2025-05-17 09:43:00,110 INFO Start worker. Find users by time
+LOG 2025-05-17 09:43:30,114 INFO Start worker. Find users by time
+LOG 2025-05-17 09:44:00,121 INFO Start worker. Find users by time
+LOG 2025-05-17 09:44:30,133 INFO Start worker. Find users by time
+LOG 2025-05-17 09:45:00,157 INFO Start worker. Find users by time
+LOG 2025-05-17 09:45:30,158 INFO Start worker. Find users by time
+LOG 2025-05-17 09:46:00,152 INFO Start worker. Find users by time
+LOG 2025-05-17 09:46:30,158 INFO Start worker. Find users by time
+LOG 2025-05-17 09:47:00,165 INFO Start worker. Find users by time
+LOG 2025-05-17 09:47:30,175 INFO Start worker. Find users by time
+LOG 2025-05-17 09:49:05,151 INFO Start worker. Find users by time
+LOG 2025-05-17 09:49:35,174 INFO Start worker. Find users by time
+LOG 2025-05-17 09:53:19,764 INFO Start worker. Find users by time
+LOG 2025-05-17 09:53:49,758 INFO Start worker. Find users by time
+LOG 2025-05-17 09:54:19,749 INFO Start worker. Find users by time
+LOG 2025-05-17 09:54:49,760 INFO Start worker. Find users by time
+LOG 2025-05-17 09:55:19,747 INFO Start worker. Find users by time
+LOG 2025-05-17 09:55:19,754 INFO Find user 2054556183 with time 2025-05-17 09:55:05.658409
+LOG 2025-05-17 09:55:19,754 INFO Start gather for users
+LOG 2025-05-17 09:55:19,754 INFO Start gather for user 2054556183
+LOG 2025-05-17 09:55:20,383 INFO Detect difference persent for Revolution Case at user 2054556183
+LOG 2025-05-17 09:55:21,376 INFO Update skins and send notify for user 2054556183
+LOG 2025-05-17 13:19:22,806 INFO Start worker. Find users by time
+LOG 2025-05-17 13:19:52,801 INFO Start worker. Find users by time
+LOG 2025-05-17 13:20:22,798 INFO Start worker. Find users by time
+LOG 2025-05-17 13:20:22,802 INFO Find user 2054556183 with time 2025-05-17 13:20:15.785741
+LOG 2025-05-17 13:20:22,802 INFO Start gather for users
+LOG 2025-05-17 13:20:22,802 INFO Start gather for user 2054556183
+LOG 2025-05-17 13:20:23,429 INFO Detect difference persent for Revolution Case at user 2054556183
+LOG 2025-05-17 13:20:24,432 INFO Update skins and send notify for user 2054556183
+LOG 2025-05-17 13:20:25,433 INFO Send notify for user 2054556183 success
+LOG 2025-05-17 13:20:55,436 INFO Start worker. Find users by time
+LOG 2025-05-17 13:21:25,437 INFO Start worker. Find users by time
+LOG 2025-05-17 13:39:26,749 INFO Start worker
+LOG 2025-05-17 13:52:40,150 INFO Start worker
+LOG 2025-05-17 13:52:40,160 INFO Find user 2054556183 with time 2025-05-17 13:45:22.802128
+LOG 2025-05-17 13:52:40,160 INFO Start gather for users
+LOG 2025-05-17 13:52:40,160 INFO Start gather for user 2054556183
+LOG 2025-05-17 13:53:40,879 INFO Start worker
+LOG 2025-05-17 13:54:15,647 INFO Start worker
+LOG 2025-05-17 13:55:28,768 INFO Start worker
+LOG 2025-05-17 19:56:04,451 INFO Start worker
+LOG 2025-05-17 19:56:04,468 INFO Find user 2054556183 with time 2025-05-17 14:17:40.160854
+LOG 2025-05-17 19:56:04,468 INFO Start gather for users
+LOG 2025-05-17 19:56:04,468 INFO Start gather for user 2054556183

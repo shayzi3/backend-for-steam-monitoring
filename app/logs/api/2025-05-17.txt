@@ -1,0 +1,392 @@
+LOG 2025-05-17 09:20:25,249 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:20:25,630 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:20:28,013 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:21:43,684 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:23:14,364 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:26:09,360 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:26:11,472 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:26:21,977 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:26:23,138 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:26:29,989 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:26:41,321 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:27:04,683 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:37:28,673 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:37:29,364 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:37:31,854 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:38:00,654 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:38:01,245 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:38:03,657 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:38:08,113 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:38:56,375 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:38:56,767 INFO BOT POST http://localhost:8084/api/v1/user
+LOG 2025-05-17 09:39:05,195 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:39:05,496 INFO BOT POST http://localhost:8084/api/v1/user
+LOG 2025-05-17 09:39:05,883 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:39:06,182 INFO BOT POST http://localhost:8084/api/v1/user
+LOG 2025-05-17 09:39:08,622 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:39:08,928 INFO BOT POST http://localhost:8084/api/v1/user
+LOG 2025-05-17 09:40:18,292 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:40:18,694 INFO BOT POST http://localhost:8084/api/v1/user
+LOG 2025-05-17 09:40:18,698 ERROR error
+Traceback (most recent call last):
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 148, in call_next
+    message = await recv_stream.receive()
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\anyio\streams\memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\middlewares\log.py", line 25, in dispatch
+    return await call_next(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 156, in call_next
+    raise app_exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 141, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\routers\user\router.py", line 59, in create_user
+    language=arguments.language.value,
+AttributeError: 'str' object has no attribute 'value'
+LOG 2025-05-17 09:41:53,143 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:41:53,501 INFO BOT POST http://localhost:8084/api/v1/user
+LOG 2025-05-17 09:41:53,504 ERROR error
+Traceback (most recent call last):
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 148, in call_next
+    message = await recv_stream.receive()
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\anyio\streams\memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\middlewares\log.py", line 25, in dispatch
+    return await call_next(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 156, in call_next
+    raise app_exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 141, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\routers\user\router.py", line 60, in create_user
+    currency=arguments.currency.int_value
+AttributeError: 'int' object has no attribute 'int_value'
+LOG 2025-05-17 09:42:35,388 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:42:35,776 INFO BOT POST http://localhost:8084/api/v1/user
+LOG 2025-05-17 09:45:02,046 INFO BOT PATCH http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:45:30,972 INFO BOT POST http://localhost:8084/api/v1/skin?telegram_id=2054556183
+LOG 2025-05-17 09:45:39,093 INFO BOT POST http://localhost:8084/api/v1/skin?telegram_id=2054556183
+LOG 2025-05-17 09:45:47,334 INFO BOT POST http://localhost:8084/api/v1/skin?telegram_id=2054556183
+LOG 2025-05-17 09:45:47,954 ERROR error
+Traceback (most recent call last):
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 545, in _prepare_and_execute
+    self._rows = deque(await prepared_stmt.fetch(*parameters))
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\asyncpg\prepared_stmt.py", line 176, in fetch
+    data = await self.__bind_execute(args, 0, timeout)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\asyncpg\prepared_stmt.py", line 267, in __bind_execute
+    data, status, _ = await self.__do_execute(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\asyncpg\prepared_stmt.py", line 256, in __do_execute
+    return await executor(protocol)
+  File "asyncpg\\protocol\\protocol.pyx", line 206, in bind_execute
+asyncpg.exceptions.UniqueViolationError: повторяющееся значение ключа нарушает ограничение уникальности "skins_pkey"
+DETAIL:  Ключ "(name)=(Snakebite Case)" уже существует.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 580, in execute
+    self._adapt_connection.await_(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 558, in _prepare_and_execute
+    self._handle_exception(error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 508, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 792, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.IntegrityError: <class 'asyncpg.exceptions.UniqueViolationError'>: повторяющееся значение ключа нарушает ограничение уникальности "skins_pkey"
+DETAIL:  Ключ "(name)=(Snakebite Case)" уже существует.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\middlewares\log.py", line 25, in dispatch
+    return await call_next(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 156, in call_next
+    raise app_exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 141, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\routers\skins\router.py", line 120, in create_skin
+    result = await service.create_skin(
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\routers\skins\service.py", line 82, in create_skin
+    await self.skin_repository.create(
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\db\sql\repository\base.py", line 67, in create
+    await connection.execute(sttm)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 463, in execute
+    result = await greenlet_spawn(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 201, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 2365, in execute
+    return self._execute_internal(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\orm\bulk_persistence.py", line 1294, in orm_execute_statement
+    result = conn.execute(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 580, in execute
+    self._adapt_connection.await_(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 558, in _prepare_and_execute
+    self._handle_exception(error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 508, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 792, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.IntegrityError: (sqlalchemy.dialects.postgresql.asyncpg.IntegrityError) <class 'asyncpg.exceptions.UniqueViolationError'>: повторяющееся значение ключа нарушает ограничение уникальности "skins_pkey"
+DETAIL:  Ключ "(name)=(Snakebite Case)" уже существует.
+[SQL: INSERT INTO skins (skin_id, name, image, current_price, percent, telegram_user_id) VALUES ($1::BIGINT, $2::VARCHAR, $3::VARCHAR, $4::FLOAT, $5::INTEGER, $6::BIGINT)]
+[parameters: (3114821822, 'Snakebite Case', 'https://community.fastly.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFU4naLOJzgUuYqyzIaIxa6jMOLXxGkHvcMjibmU99Sg3Qaw-hA_ZWrzLISLMlhpgJJUhGE/360fx360f', 40.1, 6, 2054556183)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+LOG 2025-05-17 09:46:11,479 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 09:46:49,921 INFO BOT POST http://localhost:8084/api/v1/skin?telegram_id=2054556183
+LOG 2025-05-17 09:46:50,360 ERROR error
+Traceback (most recent call last):
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 545, in _prepare_and_execute
+    self._rows = deque(await prepared_stmt.fetch(*parameters))
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\asyncpg\prepared_stmt.py", line 176, in fetch
+    data = await self.__bind_execute(args, 0, timeout)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\asyncpg\prepared_stmt.py", line 267, in __bind_execute
+    data, status, _ = await self.__do_execute(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\asyncpg\prepared_stmt.py", line 256, in __do_execute
+    return await executor(protocol)
+  File "asyncpg\\protocol\\protocol.pyx", line 206, in bind_execute
+asyncpg.exceptions.UniqueViolationError: повторяющееся значение ключа нарушает ограничение уникальности "skins_pkey"
+DETAIL:  Ключ "(name)=(Snakebite Case)" уже существует.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 580, in execute
+    self._adapt_connection.await_(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 558, in _prepare_and_execute
+    self._handle_exception(error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 508, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 792, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.IntegrityError: <class 'asyncpg.exceptions.UniqueViolationError'>: повторяющееся значение ключа нарушает ограничение уникальности "skins_pkey"
+DETAIL:  Ключ "(name)=(Snakebite Case)" уже существует.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\middlewares\log.py", line 25, in dispatch
+    return await call_next(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 156, in call_next
+    raise app_exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\base.py", line 141, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\routers\skins\router.py", line 120, in create_skin
+    result = await service.create_skin(
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\api\v1\routers\skins\service.py", line 82, in create_skin
+    await self.skin_repository.create(
+  File "c:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\app\db\sql\repository\base.py", line 67, in create
+    await connection.execute(sttm)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 463, in execute
+    result = await greenlet_spawn(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 201, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 2365, in execute
+    return self._execute_internal(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\orm\bulk_persistence.py", line 1294, in orm_execute_statement
+    result = conn.execute(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 580, in execute
+    self._adapt_connection.await_(
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 558, in _prepare_and_execute
+    self._handle_exception(error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 508, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "C:\Users\dyadh\OneDrive\Рабочий стол\SteamMotor\backend\.venv\lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 792, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.IntegrityError: (sqlalchemy.dialects.postgresql.asyncpg.IntegrityError) <class 'asyncpg.exceptions.UniqueViolationError'>: повторяющееся значение ключа нарушает ограничение уникальности "skins_pkey"
+DETAIL:  Ключ "(name)=(Snakebite Case)" уже существует.
+[SQL: INSERT INTO skins (skin_id, name, image, current_price, percent, telegram_user_id) VALUES ($1::BIGINT, $2::VARCHAR, $3::VARCHAR, $4::FLOAT, $5::INTEGER, $6::BIGINT)]
+[parameters: (9803089445, 'Snakebite Case', 'https://community.fastly.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFU4naLOJzgUuYqyzIaIxa6jMOLXxGkHvcMjibmU99Sg3Qaw-hA_ZWrzLISLMlhpgJJUhGE/360fx360f', 40.1, 6, 2054556183)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+LOG 2025-05-17 09:49:36,593 INFO BOT POST http://localhost:8084/api/v1/skin?telegram_id=2054556183
+LOG 2025-05-17 09:49:48,504 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 13:39:29,835 INFO Address(host='127.0.0.1', port=58885) GET http://localhost:8084/
+LOG 2025-05-17 13:39:29,871 INFO Address(host='127.0.0.1', port=58885) GET http://localhost:8084/favicon.ico
+LOG 2025-05-17 13:39:33,161 INFO Address(host='127.0.0.1', port=58885) GET http://localhost:8084/docs
+LOG 2025-05-17 13:39:33,319 INFO Address(host='127.0.0.1', port=58885) GET http://localhost:8084/openapi.json
+LOG 2025-05-17 13:52:47,052 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 13:52:56,397 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 13:53:04,371 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 13:53:46,619 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 13:53:53,958 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 13:53:55,408 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 13:54:18,736 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 13:54:26,906 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 13:54:29,218 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 13:54:30,732 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 13:54:31,865 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 13:54:32,748 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 13:54:34,433 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 13:54:53,269 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 13:54:56,685 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 13:55:32,135 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 13:55:33,708 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 13:55:34,619 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 13:55:36,115 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 19:56:13,184 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 19:56:14,499 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 19:56:15,385 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183
+LOG 2025-05-17 19:56:19,411 INFO BOT GET http://localhost:8084/api/v1/user?telegram_id=2054556183

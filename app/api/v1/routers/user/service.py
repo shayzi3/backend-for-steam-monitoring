@@ -44,7 +44,7 @@ class UserService:
                          "telegram_username": telegram_username,
                          "language": language,
                          "currency": currency,
-                         "timer": "0-0-0"
+                         "timer": "0-0-25"
                     }
                )
                return UserCreated

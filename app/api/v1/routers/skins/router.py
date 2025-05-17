@@ -37,10 +37,15 @@ skins_router = APIRouter(
 async def get_skins(
      telegram_id: int,
      service: Annotated[SkinService, Depends(get_skin_service)],
-     skin_id: int
+     skin_id: int | None = None,
+     skin_name: str | None = None
 ) -> SkinSchema:
+     if any([skin_id, skin_name]) is False:
+          return InvalidArguments.response()
+     
      result = await service.get_skin(
           skin_id=skin_id,
+          skin_name=skin_name,
           telegram_id=telegram_id
      )
      if await is_response(result) is True:
@@ -160,15 +165,17 @@ async def create_skin(
 )
 async def change_skin(
      service: Annotated[SkinService, Depends(get_skin_service)],
+     arguments: SkinUpdateArguments,
      telegram_id: int,
-     skin_id: int,
-     arguments: SkinUpdateArguments
+     skin_id: int | None = None,
+     skin_name: str | None = None
 ) -> JSONResponse:
-     if any(arguments.values) is False:
+     if any(arguments.values) is False or any([skin_id, skin_id]):
           return InvalidArguments.response()
      
      result = await service.change_skin(
           skin_id=skin_id,
+          skin_name=skin_name,
           telegram_id=telegram_id,
           skin_data=arguments.non_nullable()
      )

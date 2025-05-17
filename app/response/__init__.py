@@ -1,1 +1,2 @@
-from .abstract_response import JsonResponseProtocol, is_response
+from .abstract_response import JsonResponseProtocol
+from .base import is_response
